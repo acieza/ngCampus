@@ -1,0 +1,51 @@
+nav{
+    display: flex;
+    background-color: cornflowerblue;
+}
+.der, .izq{
+    width: 50%;
+    height: 60px;
+}
+.der{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em;
+}
+.izq{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+    /* background-color: blue; */
+}
+.logo img{
+    height: 50px;
+}
+.btn1{
+    border: 1px solid grey;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(220, 103, 138);
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tit{
+    margin-left: 1em;
+    font-size: 24px;
+    color: rgb(6, 64, 141);
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+.centro{
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    
+    padding: 2em;
+}

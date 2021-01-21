@@ -1,0 +1,16 @@
+<nav>
+    <div class="izq">
+        <div class="logo"><img src="assets/img/logo.png" alt=""> </div>
+        <p class="tit">BETA ACADEMY</p>
+    </div>
+    <div class="der">
+        <div class="btn1">Iniciar Sesión</div>
+    </div>
+</nav>
+
+<!-- Zona de Componente -->
+
+<div class="centro" >
+    <app-carta *ngFor="let item of cartas" [datoscurso]="item"></app-carta>
+   
+</div>

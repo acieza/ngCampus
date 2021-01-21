@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngCampus"
+    }
+  },
+  "defaultProject": "ngCampus",
+  "cli": {
+    "analytics": false
+  }
 }
