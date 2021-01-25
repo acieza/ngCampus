@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Carta } from 'src/app/pages/local/carta/carta';
+import { Login } from 'src/app/models/login';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServicioService {
+export class AuthService {
 
   constructor(private http: HttpClient) { }
 
 
-  getAllCurso(){
-    return this.http.get<Carta[]>('http://localhost:3000/cursos');
+
+  login(elUser: Login){
+    return this.http.post<Login>(`http://localhost:3000/login`,elUser);
   }
 }
