@@ -6,3 +6,9 @@ https://sweetalert2.github.io/#examples
 https://www.tailwind-kit.com/
 https://tailwindcomponents.com/
 https://tailblocks.cc/
+
+// Crear un modulo con router y componente incluidos // 
+
+ng g m admin --route admin --module app.module 
+
+
