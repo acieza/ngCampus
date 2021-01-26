@@ -27,15 +27,17 @@ nav{
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     color: white;
-    font-size: 20px;
-    background-color: rgb(220, 103, 138);
+    font-size: 14px;
+    background-color: #CD3F8B;
     cursor: pointer;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .tit{
     margin-left: 1em;
     font-size: 24px;
-    color: rgb(6, 64, 141);
+    background: -webkit-linear-gradient(0deg, #1A202C 0%, #CD3F8B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }

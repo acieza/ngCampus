@@ -1,0 +1,8 @@
+//pagina de mensajes de error //
+
+https://sweetalert2.github.io/#examples 
+
+// Páginas de componentes de angular predefinidos
+https://www.tailwind-kit.com/
+https://tailwindcomponents.com/
+https://tailblocks.cc/

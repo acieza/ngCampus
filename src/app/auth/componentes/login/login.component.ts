@@ -1,6 +1,10 @@
 import { Component, } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+//import { Console } from 'console';
 import { AuthService } from 'src/app/core/servicios/auth/auth.service';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-login',
@@ -16,11 +20,26 @@ export class LoginComponent {
 
   constructor(
     private authService: AuthService,
-    private formBuild: FormBuilder
+    private formBuild: FormBuilder,
+    private router: Router
     ) { }
-
+                       // Comprobar si existe el usuario para entrar en la aplicación  //
     logearUsuario(){
+    this.authService.login(this.loginForm.value)
+    .subscribe(resp =>{
+        console.log('******* TODO BIEN ******');
+        this.router.navigateByUrl('admin')
+     }, (err) => {
+        console.log(err.error.msg)
 
+                                    // Mensaje modal de error predefinido //
+       Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: err.error.msg[0],
+        footer: '<a href>Why do I have this issue?</a>'
+      })
+    });
     }
 
   
