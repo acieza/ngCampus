@@ -27,7 +27,7 @@ export class RegistroComponent  {
         email:['', [Validators.required,Validators.email]],
         password:['', [Validators.required,Validators.minLength(5)]],
         vpassword:['',[Validators.required,Validators.minLength(5)]],
-        term:['',Validators.required]
+        term:['',Validators.requiredTrue]
       })
     }
 

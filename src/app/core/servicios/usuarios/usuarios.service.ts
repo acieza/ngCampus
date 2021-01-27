@@ -14,6 +14,6 @@ export class UsuariosService {
   ) { }
 
   createUser(newUser:Registro){
-    return this.http.post<Registro>('http://localhost/usuarios', newUser);
+    return this.http.post<Registro>('http://localhost:3000/usuarios', newUser);
   }
 }
