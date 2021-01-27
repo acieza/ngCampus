@@ -1,0 +1,10 @@
+.bg-grey-lighter{
+    background-color: #dad6d6;
+}
+button:disabled{
+    background-color: rgb(182, 181, 181);
+}
+.rojo{
+   color: red;
+
+}

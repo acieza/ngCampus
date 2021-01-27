@@ -1,4 +1,7 @@
 export interface Registro {
-    email: String;
-    password: String;
+    nombre:string;
+    email: string;
+    password: string;
+    vpassword:string;
+    term: boolean;
 }
