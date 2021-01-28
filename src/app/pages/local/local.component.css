@@ -57,11 +57,16 @@ nav{
 }
 .centro{
     height: calc(100vh - 60px);
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    
-    padding: 2em;
+    grid-column-gap: 3em;
+    grid-row-gap: 3em;   
+    padding: 3em;
+}
+.centro1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
