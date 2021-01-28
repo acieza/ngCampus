@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AdminNavComponent } from './admin-nav/admin-nav.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [AdminNavComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    
+  ],
+ 
 })
-export class SharedModule { }
+
+export class SharedModule { 
+  
+  
+}

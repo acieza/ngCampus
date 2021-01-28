@@ -5,7 +5,7 @@
         Ingresa a tu cuenta
     </div>
     <div class="mt-8">
-        <form action="#" autoComplete="on" [formGroup]="loginForm" (ngSubmit)="logearUsuario()">
+        <form action="#" autoComplete="on" [formGroup]="loginForm" (ngSubmit)="logearUsuario($event)">
             <div class="flex flex-col mb-2">
                 <div class="flex relative ">
                     <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-400 text-gray-500 shadow-sm text-sm">
@@ -14,7 +14,7 @@
                             </path>
                         </svg>
                     </span>
-                    <input formControlName="email" type="text" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-400 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-500 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="email"/>
+                    <input formControlName="email" type="text" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-400 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-500 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600" placeholder="email"/>
                     </div>
                 </div>
                 <div class="flex flex-col mb-6">
@@ -25,7 +25,7 @@
                                 </path>
                             </svg>
                         </span>
-                        <input formControlName="password" type="password" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-400 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-500 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Contraseña"/>
+                        <input formControlName="password" type="password" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-400 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-500 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-800 focus:border-purple-600" placeholder="Contraseña"/>
                         </div>
                     </div>
                     <div class="flex items-center mb-6 -mt-4">

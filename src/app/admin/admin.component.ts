@@ -8,9 +8,13 @@ import { AuthService } from '../core/servicios/auth/auth.service';
 })
 export class AdminComponent implements OnInit {
 
+  public usuario;
+
   constructor(
     private authService: AuthService
-  ) { }
+  ) {
+      this.usuario = authService.usuario;
+   }
 
   ngOnInit(): void {
   }

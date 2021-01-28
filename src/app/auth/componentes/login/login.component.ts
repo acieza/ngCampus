@@ -24,7 +24,8 @@ export class LoginComponent {
     private router: Router
     ) { }
                        // Comprobar si existe el usuario para entrar en la aplicación  //
-    logearUsuario(){
+    logearUsuario(event: Event){
+      event.preventDefault();
     this.authService.login(this.loginForm.value)
     .subscribe(resp =>{
         console.log('******* TODO BIEN ******');

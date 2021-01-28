@@ -10,7 +10,7 @@ import { AdminComponent } from './admin.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
-   
+    
   ]
 })
 export class AdminModule { }

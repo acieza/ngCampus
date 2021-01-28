@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/core/servicios/usuarios/usuarios.service';
+import { queSeanIguales } from 'src/app/util/validadorPersonal';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registro',
@@ -28,6 +30,8 @@ export class RegistroComponent  {
         password:['', [Validators.required,Validators.minLength(5)]],
         vpassword:['',[Validators.required,Validators.minLength(5)]],
         term:['',Validators.requiredTrue]
+      },{
+        validators: queSeanIguales,
       })
     }
 
@@ -37,9 +41,29 @@ export class RegistroComponent  {
       console.log(this.form.value);
       this.usuariosService.createUser(this.form.value)
       .subscribe(newUser =>{
-        console.log('******* Usuario Guardao ********');
-      },(err)=>console.log(err.error.msg)
+        console.log('******* Usuario Guardado ********');
+            Swal.fire({
+              //position: 'top-end',
+              icon: 'success',
+              title: 'Usuario Guardado con éxito',
+              showConfirmButton: false,
+              timer: 1500
+            });
+              this.router.navigateByUrl('auth')
+      },(err)=>{console.log(err.error.msg)         
+        Swal.fire({
+          icon:'error',
+          title:'Oops...',
+          text: err.error.msg,         
+        })     
+      }
       );
+    }
+
+    compararPassword():boolean{
+      return this.form.hasError('noIguales') && 
+             this.form.get('password').dirty &&
+             this.form.get('vpassword').dirty;
     }
   }
  

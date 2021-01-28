@@ -1,3 +1,9 @@
-<p>admin works!</p>
-<div (click)="cerrarSesion()">Cerrar sesión</div>
+<nav>
+    <div class="usuario">
+        <img [src]="usuario.devuelveImagen" alt="">
+        <p>{{usuario.nombre}}</p>
+    </div>
+    <div (click)="cerrarSesion()">Log out</div>
+</nav>
+
 

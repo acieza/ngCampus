@@ -21,6 +21,7 @@ nav{
 }
 .logo img{
     height: 50px;
+    margin-left: 0.8em;
 }
 .btn1{
     border: 1px solid grey;
@@ -30,6 +31,19 @@ nav{
     font-size: 14px;
     background-color: #CD3F8B;
     cursor: pointer;
+    margin-right: 0.8em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn2{
+    border: 1px solid grey;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color:#CD3F8B;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 0.8em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .tit{

@@ -15,7 +15,7 @@
                     class="block border border-grey-light w-full p-3 rounded mb-4"
                     name="fullname"
                     formControlName="nombre"                    
-                    placeholder="Nombre Completo" />
+                    placeholder="Nombre Usuario" />
 
                 <div class="rojo" *ngIf="form.get('email').hasError('required') && form.get('email').dirty">*</div>              
                 <input 
@@ -38,7 +38,7 @@
                     name="confirm_password"
                     formControlName="vpassword"
                     placeholder="Confirmar Contraseña" />
-
+                <div class="rojo" *ngIf="compararPassword()">*Las Contraseñas no Coinciden</div>
                 <button
                     [disabled]="form.invalid"
                     type="submit"

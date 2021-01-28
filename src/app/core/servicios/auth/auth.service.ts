@@ -4,11 +4,14 @@ import { Login } from 'src/app/models/login';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { of } from 'rxjs/internal/observable/of';
+import { Usuario } from 'src/app/models/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+  public usuario: Usuario;
 
   constructor(
     private http: HttpClient,
@@ -40,6 +43,9 @@ export class AuthService {
     })
     .pipe(
       tap((resp: any)=>{
+        const{nombre, email, img, _id, role}=resp.usuario
+        this.usuario=new Usuario(nombre,email,'',img,role,_id);
+        this.usuario.imprimirUsuario();
         localStorage.setItem('token', resp.token);
       }),
       map(resp => true),
