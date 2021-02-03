@@ -10,6 +10,9 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
     CommonModule,
     
   ],
+  exports:[
+    AdminNavComponent
+  ]
  
 })
 

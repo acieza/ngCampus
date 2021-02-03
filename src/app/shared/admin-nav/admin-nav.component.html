@@ -1,7 +1,7 @@
-
 <nav>
-    <div>
-        <p>Nombre</p>
-        <img src="assets/img/3.jpg" alt="">
+    <div class="usuario">
+        <img [src]="usuario.devuelveImagen" alt="">
+        <p>{{usuario.nombre}}</p>
     </div>
+    <div (click)="cerrarSesion()">Log out</div>
 </nav>

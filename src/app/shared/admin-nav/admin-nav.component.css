@@ -1,6 +1,25 @@
 nav{
-    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
     width: 100%;
     background-color: #333333;
     color: white;
+    padding-right: 2em;
+}
+.usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1em;
+    
+}
+.usuario p{
+    font-size: 10px;
+}
+.usuario img {
+    height: 50px;
+    border-radius: 2em;
+    background-color: rgb(71, 71, 71);
 }
