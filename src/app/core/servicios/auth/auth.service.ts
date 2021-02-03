@@ -54,6 +54,14 @@ export class AuthService {
     
   }
 
+  modificarUser(putUser: Usuario){
+    const token = localStorage.getItem('token') || ''
+    return this.http.put<Usuario>(`http://localhost:3000/usuarios/${this.usuario._id}`, putUser, {
+      headers: {
+        'mytoken':token
+      }});
+  }
+
 
 
   
