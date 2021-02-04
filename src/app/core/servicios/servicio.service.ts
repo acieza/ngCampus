@@ -15,6 +15,11 @@ export class ServicioService {
   }
 
   deleteCurso(id:string){
-    return this.http.delete<Carta>(`http://localhost:3000/cursos/${id}`)
+    const token = localStorage.getItem('token') || ''
+    return this.http.delete<Carta>(`http://localhost:3000/cursos/${id}`,{
+      headers: {
+        'mytoken':token
+      }
+    })
   }
 }

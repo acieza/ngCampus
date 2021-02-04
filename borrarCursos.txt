@@ -1,0 +1,40 @@
+servicio.service:
+
+deleteCurso(id:string){
+    const token = localStorage.getItem('token') || ''
+    return this.http.delete<Carta>(`http://localhost:3000/cursos/${id}`,{
+      headers: {
+        'mytoken':token
+      }
+    })
+  }
+
+curso.component.ts:
+
+borrarCurso(id:string){
+      this.servicioService.deleteCurso(id)
+      .subscribe( resp =>{
+        this.cargaCurso()
+        console.log('*****BORRADO*****')
+      })
+      }
+
+SERVIDOR //////////////////////////////////////////////////
+
+cursos.js //routes //
+
+router.delete('/:id', validarJWT, borrarCurso);
+
+
+cursos.js // Controller // 
+
+const borrarCurso = async (req, res)=>{
+try{
+    const curso = await Curso.findById(req.params.id)
+    const c1 = await curso.deleteOne()
+    res.json(c1)
+}catch (error){
+    res.send('Error')
+}
+}
+
