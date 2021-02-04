@@ -13,4 +13,8 @@ export class ServicioService {
   getAllCurso(){
     return this.http.get<Carta[]>('http://localhost:3000/cursos');
   }
+
+  deleteCurso(id:string){
+    return this.http.delete<Carta>(`http://localhost:3000/cursos/${id}`)
+  }
 }

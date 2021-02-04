@@ -26,11 +26,20 @@ export class CursosComponent  {
         this.cartas = cartas;
       })
     }
+    
+    borrarCurso(id:string){
+      this.servicioService.deleteCurso(id)
+      .subscribe( resp =>{
+        this.cargaCurso()
+        console.log('*****BORRADO*****')
+      })
+      }
+    }
 
   
 
   
 
 
+  
 
-}
