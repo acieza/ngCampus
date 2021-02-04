@@ -63,6 +63,9 @@ h2{
     text-align: center;
     font-weight: bold;
 }
+/* input:disabled{
+    background-color:  rgb(182, 181, 181);
+} */
 /* button:disabled {
    background-color:gray;
 } */

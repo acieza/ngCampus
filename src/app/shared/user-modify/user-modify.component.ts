@@ -54,10 +54,10 @@ export class UserModifyComponent {
      this.subirService.subirFoto(formData)
      .subscribe((resp:any) =>{
       
-      console.log(resp.nombre);
+      console.log(resp.nombreImg);
 
-      this.cambiaFoto.setValue( resp.nombre);
-      this.usuario.img = resp.nombre;
+      this.cambiaFoto.setValue( resp.nombreImg);
+      this.usuario.img = resp.nombreImg;
      },(err) =>{
       Swal.fire({
         icon:'error',
@@ -71,13 +71,12 @@ export class UserModifyComponent {
    modificarUsuario(event: Event){
      event.preventDefault();
      console.log(this.form.value);
+
     this.authService.modificarUser(this.form.value)
     .subscribe((resp:any) =>{
       
-      //console.log(resp.nombre);
 console.log('*******OK******')
-      // this.cambiaFoto.setValue( resp.nombre);
-      // this.usuario.img = resp.nombre;
+
      },(err) =>{
       Swal.fire({
         icon:'error',

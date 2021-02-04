@@ -58,10 +58,16 @@ nav{
 .centro{
     height: calc(100vh - 60px);
     width: 100%;
-    display: grid;
+    display: flex;
+    justify-content: center;
+   
+}
+.centrar{
+    width: 90%;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    
+    grid-column-gap: 2em;
+    grid-row-gap: 3em;
+    margin-top: 3em;
+    display: grid;
     padding: 2em;
 }

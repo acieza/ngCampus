@@ -1,0 +1,14 @@
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.linea{
+    display: flex;
+    
+}
+a{
+    padding-right: 20px;
+}
