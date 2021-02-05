@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ServicioService } from 'src/app/core/servicios/servicio.service';
 import { Carta } from 'src/app/pages/local/carta/carta';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cursos',
@@ -28,15 +29,33 @@ export class CursosComponent  {
     }
     
     borrarCurso(id:string){
-      this.servicioService.deleteCurso(id)
-      .subscribe( resp =>{
-        this.cargaCurso()
-        console.log('*****BORRADO*****')
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+          this.servicioService.deleteCurso(id)
+          .subscribe( resp =>{
+            this.cargaCurso()
+            console.log('*****BORRADO*****')
+          })
+        }
       })
+         
+        }
       }
-    }
 
-  
+    
 
   
 
