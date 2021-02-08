@@ -5,20 +5,26 @@ import { UserModifyComponent } from '../shared/user-modify/user-modify.component
 
 import { AdminComponent } from './admin.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { EditarComponent } from './editar/editar.component';
 
 const routes: Routes = [
   {
     path: '', component: AdminComponent,
     children: [
       {
-        path: 'Inicio', component:AdminNavComponent
+        path: 'Inicio', component: AdminNavComponent
       },
       {
-        path: 'Perfil', component:UserModifyComponent
+        path: 'Perfil', component: UserModifyComponent
       },
       {
-        path: 'Cursos', component: CursosComponent
+        path: 'Cursos', component: CursosComponent,
+      },
+      {
+        path: 'Editar', component: EditarComponent
       }
+        
+      
     ]
   }];
 
