@@ -7,9 +7,12 @@ import { SharedModule } from '../shared/shared.module';
 import { CursosComponent } from './cursos/cursos.component';
 import { EditarComponent } from './editar/editar.component';
 
+import { UsuariosComponent } from './usuarios/usuarios.component';
+
+
 
 @NgModule({
-  declarations: [AdminComponent, CursosComponent, EditarComponent],
+  declarations: [AdminComponent, CursosComponent, EditarComponent, UsuariosComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

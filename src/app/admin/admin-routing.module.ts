@@ -6,6 +6,7 @@ import { UserModifyComponent } from '../shared/user-modify/user-modify.component
 import { AdminComponent } from './admin.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { EditarComponent } from './editar/editar.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,9 @@ const routes: Routes = [
       },
       {
         path: 'Editar', component: EditarComponent
+      },
+      {
+        path: 'Usuarios', component: UsuariosComponent
       }
         
       
