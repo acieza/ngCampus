@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    justify-content: space-between;
 }
 .bcentrar{
     width: 100%;
@@ -37,4 +37,8 @@
 }
 .btn:hover{
     background-color: #374151;
+}
+.logout{
+    width: 90%;
+    margin-bottom: 1em;
 }

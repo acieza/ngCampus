@@ -9,6 +9,11 @@
     display: flex;
     
 }
-a{
-    padding-right: 20px;
+.btn2{
+    border: 1px solid black;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(168, 6, 6);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }

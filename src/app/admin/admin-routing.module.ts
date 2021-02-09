@@ -22,7 +22,7 @@ const routes: Routes = [
         path: 'Cursos', component: CursosComponent,
       },
       {
-        path: 'Editar', component: EditarComponent
+        path: 'Editar/:id', component: EditarComponent
       },
       {
         path: 'Usuarios', component: UsuariosComponent

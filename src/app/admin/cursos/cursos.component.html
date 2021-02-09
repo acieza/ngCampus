@@ -1,5 +1,5 @@
 <div class="centrar">
-    <div class="container mx-auto px-4 sm:px-8 max-w-3xl">
+    <div class="container mx-auto px-4 sm:px-8 max-w-5xl">
         <div class="py-8">
             <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                 <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
@@ -12,7 +12,7 @@
                                 </th>
                                 <th scope="col"
                                     class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                    Tiempo
+                                    horas
                                 </th>
                                 <th scope="col"
                                     class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
@@ -20,7 +20,7 @@
                                 </th>
                                 <th scope="col"
                                     class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                    status
+                                    oferta
                                 </th>
                                 <th scope="col"
                                     class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
@@ -28,7 +28,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of cartas">
+                            <tr *ngFor="let item of cartas ">
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0">
@@ -39,14 +39,14 @@
                                         </div>
                                         <div class="ml-3">
                                             <p class="text-gray-900 whitespace-no-wrap">
-                                                {{item.titulo}}
+                                                {{item.titulo | slice:0:17}}
                                             </p>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
-                                        {{item.tiempo}} Horas
+                                        {{item.tiempo}}
                                     </p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -56,22 +56,33 @@
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <span
+                                        *ngIf="item.oferta"
                                         class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                         <span aria-hidden="true"
-                                            class="absolute inset-0 bg-green-200 opacity-50 rounded-full">
+                                            class="absolute inset-0 bg-green-400 opacity-50 rounded-full">
                                         </span>
                                         <span class="relative">
-                                            active
+                                            activado
+                                        </span>
+                                    </span>
+                                    <span
+                                        *ngIf="!item.oferta"
+                                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                        <span aria-hidden="true"
+                                            class="absolute inset-0 bg-red-400 opacity-50 rounded-full">
+                                        </span>
+                                        <span  class="relative">
+                                            desactivado
                                         </span>
                                     </span>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <div class="linea">
-                                    <a  class="text-indigo-600 hover:text-indigo-900">
-                                       <p routerLink="../Editar" >Edit</p>   
+                                    <a   class="text-indigo-600 hover:text-indigo-900">
+                                       <p routerLink="../Editar/{{item._id}}" class="btn" >Edit</p>   
                                     </a>
                                     <a   class="text-indigo-600 hover:text-indigo-900">
-                                        <p  (click)="borrarCurso(item._id)">Borrar</p> 
+                                        <p  (click)="borrarCurso(item._id)" class="btn2">Borrar</p> 
                                      </a>
                                     </div>
                                 </td>

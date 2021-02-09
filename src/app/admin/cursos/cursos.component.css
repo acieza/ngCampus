@@ -9,6 +9,20 @@
     display: flex;
     
 }
-a{
-    padding-right: 20px;
+
+.btn{
+    border: 1px solid black;
+    padding: 5px 20px 5px 20px;
+    background-color: #1F2937;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn2{
+    border: 1px solid black;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(168, 6, 6);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }

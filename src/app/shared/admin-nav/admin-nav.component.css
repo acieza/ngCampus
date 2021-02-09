@@ -1,26 +1,28 @@
 nav{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  
     height: 70px;
     width: 100%;
     background-color: #1F2937;
     color: white;
-    padding-right: 2em;
+  
 }
 .usuario{
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
     margin-right: 1em;
     position: relative;
+    width: 100%;
+    padding-right: 1em;
 }
+
 .usuario p{
-    font-size: 10px;
+    font-size: 18px;
 }
 .usuario img {
     height: 50px;
     border-radius: 2em;
+    margin-left: 1em;
     background-color: rgb(71, 71, 71);
 }
 .abs{
@@ -29,6 +31,145 @@ nav{
     width: 15px;
     background-color: green;
     border-radius: 2em;
-    right: -5px;
-    top: 30px;
+    right: 10px;
+    top: 35px;
+}
+
+.der, .izq{
+    width: 50%;
+    height: 60px;
+}
+.der{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.izq{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+    /* background-color: blue; */
+}
+.logo img{
+    height: 50px;
+    margin-left: 0.8em;
+    background-color: transparent;
+}
+.tit{
+    margin-left: 1em;
+    font-size: 24px;
+    background: -webkit-linear-gradient(0deg, #394358 0%, #CD3F8B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+/*****************************************************/
+.panel {
+	margin: 15px auto 15px;
+	max-width: 250px;
+}
+
+.admin-panel {
+	padding: 12px 0;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+}
+
+.admin-panel .text {
+	color: #888888;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.admin-panel .fa-cog {
+	float: right;
+	margin-right: 10px;
+	font-size: 20px;
+	color: #888888;
+}
+
+.admin-panel :hover { cursor: pointer; color: #555555; }
+
+input#toggle { display: none; }
+input#toggle ~ .menu-panel { display: block; }
+input#toggle:checked ~ .menu-panel { display: none; }
+
+.menu-panel {
+	margin-top: 14px;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+}
+
+.arrow {
+	position: absolute;
+	top: 111px;
+	margin-left: 15px;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 9px solid #f8f8f8;
+}
+
+.menu-panel .row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-panel .column-left {
+	float: left;
+	width: 85%;
+	margin-left: 10px;
+}
+
+.menu-panel .column-right {
+	float: right;
+	width: 15%;
+	padding: 8px;
+	text-align: right;
+}
+
+/* Clear floats after the columns */
+.menu-panel .row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.menu-panel a {
+	color: #888888;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.menu-panel i {
+	font-size: 18px;
+	width: 25px;
+	text-align: center;
+}
+
+.menu-panel:hover .row:hover { background: #ebebeb; color: #555555; border-radius: 3px; }
+
+.menu-panel:hover a { color: #bebebe; }
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }

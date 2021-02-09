@@ -53,6 +53,13 @@ export class CursosComponent  {
       })
          
         }
+
+    editarCurso(id: string){
+
+     this.router.navigateByUrl(`../Editar/${id}`);
+    }
+
+
       }
 
     

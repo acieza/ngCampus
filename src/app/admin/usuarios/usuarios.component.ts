@@ -34,6 +34,16 @@ export class UsuariosComponent implements OnInit {
     })
   }
 
+  devuelveImgUser(imagen:string){
+    let img = "";
+    if(imagen == null ){
+      img = 'http://localhost:3000/img/user.png';
+    }else{
+      img = 'http://localhost:3000/img/'+imagen;
+    }
+    
+    return img
+  }
   borrarUser(id:string){
     Swal.fire({
       title: 'Are you sure?',

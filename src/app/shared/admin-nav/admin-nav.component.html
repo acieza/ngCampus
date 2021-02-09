@@ -1,8 +1,35 @@
 <nav>
     <div class="usuario">
-        <img [src]="usuario.devuelveImagen" alt="">
-        <p>{{usuario.nombre}}</p>
-        <div class="abs"></div>
+        <div class="izq">
+            <div class="logo"><img src="assets/img/logo.png" alt=""> </div>
+        <p class="tit">BETA ACADEMY</p>
+        </div>
+        <div class="der">               
+                <p>{{usuario.nombre}}</p>
+            <img [src]="usuario.devuelveImagen" alt="">
+            <div class="abs"></div>
+        </div>
+
     </div>
-    <div (click)="cerrarSesion()">Log out</div>
+    <!-- <div (click)="cerrarSesion()">Log out</div> -->
+    <!-- <p class='title'><a href='https://dribbble.com/shots/850410' target='_blank'>Dropdown Menu UI</a></p> -->
+
+<!-- <div class='panel noselect'>
+	<div class='admin-panel'>
+		<label class='text' for='toggle'>Settings</label>
+		<label class='fas fa-cog' for='toggle'></label>
+	</div>
+
+	<input type='checkbox' id='toggle'>
+
+	<div class='menu-panel'>
+		<div class='arrow'></div>
+		<a href='#' class='row'>
+			<div class='column-left'>Edit Users</div>
+			<div class='column-right'><i class='fas fa-user'></i></div>
+		</a>
+		
+</div>
+</div> -->
+    
 </nav>
