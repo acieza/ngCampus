@@ -8,6 +8,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { EditarComponent } from './editar/editar.component';
 
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
