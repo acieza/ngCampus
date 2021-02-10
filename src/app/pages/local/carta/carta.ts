@@ -10,4 +10,5 @@ export interface Carta {
   link: string;
   precio: number;
   tiempo: number;
+  oferta: boolean;
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Carta } from 'src/app/pages/local/carta/carta';
 
 @Injectable({
@@ -7,7 +8,12 @@ import { Carta } from 'src/app/pages/local/carta/carta';
 })
 export class ServicioService {
 
-  constructor(private http: HttpClient) { }
+  curso: Carta;
+
+  constructor(
+    private http: HttpClient,
+
+    ) { }
 
 
   getAllCurso(){
@@ -22,6 +28,14 @@ export class ServicioService {
       }
     })
   }
+
+  // modificarCurso(putCurso: Carta){
+  //   const token = localStorage.getItem('token') || ''
+  //   return this.http.put<Carta>(`http://localhost:3000/cursos/${this.curso._id}`, putCurso, {
+  //     headers: {
+  //       'mytoken':token
+  //     }});
+  // }
 
   createCurso(newCurso:Carta){
     return this.http.post<Carta>('http://localhost:3000/cursos', newCurso);

@@ -8,7 +8,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { EditarComponent } from './editar/editar.component';
 
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfesoresComponent } from './profesores/profesores.component';
 
 
@@ -19,7 +19,8 @@ import { ProfesoresComponent } from './profesores/profesores.component';
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

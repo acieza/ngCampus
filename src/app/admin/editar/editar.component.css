@@ -1,0 +1,91 @@
+.linea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89%;
+    
+}
+.lineaT{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    
+}
+.linea2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    
+}
+.esp{
+    margin-right: 0.3em;
+   
+}
+.caja{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DAD6D6;
+}
+.titulo1, .titulo2{ 
+    width: 50%;
+}
+.titulo11{
+    margin-right: 0.4em;
+}
+
+form{
+    background-color: white;
+    border-radius: 5px;
+    height: 650px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.centrar2{
+    width: 80%;
+}
+input{
+    border: 1px solid #2B6CB0;
+    padding: 5px;
+    border-radius: 5px;
+    width: 44.7%;
+}
+.check{
+    height: 16px;
+}
+
+.input1{
+    width: 44.7%;   
+    border: 1px solid #2B6CB0;
+}
+textarea{
+    border: 1px solid #2B6CB0;
+    width: 80%;
+}
+button{
+    background-color: #3182CE;
+    margin-top: 1.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    padding-bottom: 5px;
+    border-radius: 0.5em;
+    width: 100%;
+}
+button:hover{
+    background-color: #2B6CB0;
+    transition: 1s;
+}
+.botones{
+    text-align: center;
+}
+.alinear{
+    width: 80%;
+}
