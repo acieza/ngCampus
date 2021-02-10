@@ -9,11 +9,12 @@ import { EditarComponent } from './editar/editar.component';
 
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { FormsModule } from '@angular/forms';
+import { ProfesoresComponent } from './profesores/profesores.component';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, CursosComponent, EditarComponent, UsuariosComponent],
+  declarations: [AdminComponent, CursosComponent, EditarComponent, UsuariosComponent, ProfesoresComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

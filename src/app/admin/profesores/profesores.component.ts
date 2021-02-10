@@ -1,17 +1,17 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/servicios/auth/auth.service';
-import { UsuariosService } from 'src/app/core/servicios/usuarios/usuarios.service';
 import { Usuario } from 'src/app/models/usuario';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-usuarios',
-  templateUrl: './usuarios.component.html',
-  styleUrls: ['./usuarios.component.css']
+  selector: 'app-profesores',
+  templateUrl: './profesores.component.html',
+  styleUrls: ['./profesores.component.css']
 })
-export class UsuariosComponent implements OnInit {
-
+export class ProfesoresComponent implements OnInit {
+  
   usuarios:Usuario[];
 
   public usuario;
@@ -24,11 +24,11 @@ export class UsuariosComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.cargaUsers();
+    this.cargaProfesor();
   }
 
-  cargaUsers(){
-    this.authService.getOnlyUsuarios()
+  cargaProfesor(){
+    this.authService.getOnlyProfesor()
     .subscribe(usuarios =>{
       this.usuarios = usuarios;
       console.log(this.usuarios);
@@ -36,16 +36,6 @@ export class UsuariosComponent implements OnInit {
       this.init();
     })
   }
-
-  // cargaProfesor(){
-  //   this.authService.getOnlyProfesor()
-  //   .subscribe(usuarios =>{
-  //     this.usuarios = usuarios;
-  //     console.log(this.usuarios);
-  //     this.filteredItems = this.usuarios;
-  //     this.init();
-  //   })
-  // }
 
   
 
@@ -77,7 +67,7 @@ export class UsuariosComponent implements OnInit {
         )
         this.authService.deleteUser(id)
         .subscribe( resp =>{
-          this.cargaUsers()
+          this.cargaProfesor()
           console.log('*****BORRADO*****')
         })
       }
@@ -89,7 +79,7 @@ export class UsuariosComponent implements OnInit {
 
   filteredItems: Usuario[];
   pages: number = 3;
-  pageSize: number = 4;
+  pageSize: number = 5;
   pageNumber: number = 0;
   currentIndex: number = 1;
   items: Usuario[];
@@ -101,7 +91,7 @@ export class UsuariosComponent implements OnInit {
   init() {
     this.currentIndex = 1;
     this.pageStart = 1;
-    this.pages = 3;
+    this.pages = 4;
 
     this.pageNumber = parseInt("" + (this.filteredItems.length / this.pageSize));
     if (this.filteredItems.length % this.pageSize != 0) {

@@ -54,9 +54,18 @@ export class AuthService {
     
   }
 
-  getAllUsuarios(){
+  getOnlyUsuarios(){
     const token = localStorage.getItem('token') || ''
-    return this.http.get<Usuario[]>('http://localhost:3000/usuarios', {
+    return this.http.get<Usuario[]>('http://localhost:3000/usuarios/user', {
+      headers: {
+        'mytoken':token
+      }
+    });
+  }
+
+  getOnlyProfesor(){
+    const token = localStorage.getItem('token') || ''
+    return this.http.get<Usuario[]>('http://localhost:3000/usuarios/profesor', {
       headers: {
         'mytoken':token
       }

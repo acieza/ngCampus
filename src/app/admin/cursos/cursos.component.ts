@@ -33,6 +33,8 @@ export class CursosComponent  {
         this.init();
       })
     }
+
+    
     
     borrarCurso(id:string){
       Swal.fire({

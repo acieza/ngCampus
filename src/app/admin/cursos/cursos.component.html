@@ -110,6 +110,17 @@
                         </tbody>
                     </table>
                     <div class="px-5 bg-white py-5 flex flex-col xs:flex-row items-center xs:justify-between">
+                        <div class="res bg-white">
+                            <p class="text-sm leading-5 text-blue-700">
+                                    Página
+                                    <span class="font-medium">{{currentIndex}}</span>
+                                    de
+                                    <span class="font-medium">{{pageNumber}}</span>
+                                    de
+                                    <span class="font-medium">{{filteredItems.length}}</span>
+                                    resultados
+                            </p>
+                    </div>
                         <div class="flex items-center">
                             <button type="button"
                             (click)="prevPage()"

@@ -22,4 +22,8 @@ export class ServicioService {
       }
     })
   }
+
+  createCurso(newCurso:Carta){
+    return this.http.post<Carta>('http://localhost:3000/cursos', newCurso);
+  }
 }
