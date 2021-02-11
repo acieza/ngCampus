@@ -1,13 +1,13 @@
 <div class="caja">
 
-    <form [formGroup]="form" (ngSubmit)="Guardar($event)">
+    <form [formGroup]="form" (ngSubmit)="crearCurso($event)">
         <div class="lineaT">
             <div  class="titulo1">Imagen</div>
             <div class="titulo2">Imagen 2</div>
         </div>
         <div class="linea">
-            <input   class="titulo11" type="file" name="" id="">
-            <input  type="file" name="" id="">
+            <input    class="titulo11" type="file" name="" id="">
+            <input    type="file" name="" id="">
         </div>
 
         <div class="lineaT">
@@ -26,21 +26,21 @@
         </div>
         
         <div class="linea">
-            <input formControlName="precio" class="esp input1" type="text" name="" id="">
-            <input  formControlName="tiempo" type="text" name="" id="">
+            <input  class="esp input1" type="text" name="" id="">
+            <input   type="text" name="" id="">
         </div>
         <div class="alinear">
             <div>Descripcion</div>
         </div>
-        <textarea formControlName="descripcion" name="" id="" cols="30" rows="5"></textarea>
+        <textarea  name="" id="" cols="30" rows="5"></textarea>
         <div class="alinear">
             <div>Descripcion2</div>
         </div>
-        <textarea formControlName="descripcionGeneral" name="" id="" cols="30" rows="5"></textarea>
+        <textarea  name="" id="" cols="30" rows="5"></textarea>
         <div class="centrar2">
             <div class="linea2">
                 <div  class="esp">Oferta</div>
-                <input formControlName="oferta" class="check" type="checkbox" name="" id="">
+                <input  class="check" type="checkbox" name="" id="">
             </div>
             <div class="botones">
                 <button>Guardar Cambios</button>

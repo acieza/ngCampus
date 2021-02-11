@@ -4,6 +4,7 @@ import { AdminNavComponent } from '../shared/admin-nav/admin-nav.component';
 import { UserModifyComponent } from '../shared/user-modify/user-modify.component';
 
 import { AdminComponent } from './admin.component';
+import { AnadirComponent } from './anadir/anadir.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { EditarComponent } from './editar/editar.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
@@ -30,6 +31,9 @@ const routes: Routes = [
       },
       {
         path: 'Profesores', component: ProfesoresComponent
+      },
+      {
+        path: 'Anadir', component: AnadirComponent
       }
         
       

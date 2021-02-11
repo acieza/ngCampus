@@ -26,3 +26,14 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.anadir{
+    background-color: #3182CE;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+}
+.anadir:hover{
+    background-color: #235f9e;
+    color: white;
+    transition: 1s;
+}
