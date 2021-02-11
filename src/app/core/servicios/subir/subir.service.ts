@@ -19,6 +19,16 @@ export class SubirService {
       tap(resp =>{})
     )
   }
+  subirFotoC(datos: FormData){
+    const token = localStorage.getItem('token') || '';
+    return this.http.post('http://localhost:3000/subir/imgCurso', datos, {
+        headers:{
+          'mytoken':token
+        }
+    }).pipe(
+      tap(resp =>{})
+    )
+  }
 
   
 }

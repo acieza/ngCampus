@@ -14,4 +14,6 @@ export class CartaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }

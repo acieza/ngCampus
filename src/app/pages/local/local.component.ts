@@ -9,6 +9,8 @@ import { Carta } from './carta/carta';
 })
 export class LocalComponent implements OnInit {
 
+  
+
   constructor(private servicioService: ServicioService) { }
 
   ngOnInit(): void {
@@ -21,6 +23,8 @@ export class LocalComponent implements OnInit {
       this.cartas = cartas;
     })
   }
+
+  
 
   cartas:Carta[]=[
     // {

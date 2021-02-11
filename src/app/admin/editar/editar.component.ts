@@ -26,10 +26,8 @@ export class EditarComponent implements OnInit {
     private router: ActivatedRoute,
     private servicioService: ServicioService,
     private subirService: SubirService
-    ) { 
-      
+    ) {   
     this.cargaCurso(this.identificaCurso);
-    
     }
 
 ngOnInit(){
