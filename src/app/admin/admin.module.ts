@@ -15,7 +15,13 @@ import { AnadirComponent } from './anadir/anadir.component';
 
 
 @NgModule({
-  declarations: [AdminComponent, CursosComponent, EditarComponent, UsuariosComponent, ProfesoresComponent, AnadirComponent],
+  declarations: [
+    AdminComponent, 
+    CursosComponent, 
+    EditarComponent, 
+    UsuariosComponent, 
+    ProfesoresComponent, 
+    AnadirComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

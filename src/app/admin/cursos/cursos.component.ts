@@ -34,7 +34,15 @@ export class CursosComponent  {
       })
     }
 
-    
+     devuelveImagen(imagen: string){
+       
+      if(imagen=="" || imagen == null){
+        return `assets/img/user.png`;
+      }else{
+         
+          return `http://localhost:3000/imgCurso/${imagen}`;
+      }
+  }
     
     
     borrarCurso(id:string){

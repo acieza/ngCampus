@@ -57,8 +57,8 @@ export class AnadirComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500
           });
-            this.router.navigateByUrl('Cursos')
-    },(err)=>{console.log(err.error.msg)         
+            this.router.navigateByUrl(`admin/Cursos`)
+    },(err)=>{         
       Swal.fire({
         icon:'error',
         title:'Oops...',

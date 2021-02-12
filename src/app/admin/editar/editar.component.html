@@ -1,18 +1,18 @@
 <div class="caja">
 
-    <form [formGroup]="form" (ngSubmit)="Guardar($event)">
+    <form [formGroup]="form" (ngSubmit)="modificarCurso($event)">
         <div class="lineaT">
             <div  class="titulo1">Imagen</div>
             <div class="titulo2">Imagen 2</div>
         </div>
         <div class="linea">
-            <input   class="titulo11" type="file" name="" id="">
-            <input  type="file" name="" id="">
+            <input (change)="uploadFile($event)"  class="titulo11" type="file" name="" id="">
+            <input (change)="uploadFile2($event)" type="file" name="" id="">
         </div>
 
         <div class="lineaT">
-            <div  class="titulo1">Titulo</div>
-            <div class="titulo2">Titulo2</div>
+            <div  class="titulo1">Titulo <span class="rojo" *ngIf="form.get('titulo').hasError('required') && form.get('titulo').dirty">*Titulo es requerido</span></div>
+            <div class="titulo2">Titulo2 <span class="rojo" *ngIf="form.get('titulo2').hasError('required') && form.get('titulo2').dirty">*Titulo 2 es requerido</span></div>
         </div>
         
         <div class="linea">
@@ -21,7 +21,7 @@
         </div>
         <!--  -->
         <div class="lineaT">
-            <div  class="titulo1">Precio</div>
+            <div  class="titulo1">Precio <span class="rojo" *ngIf="form.get('precio').hasError('required') && form.get('precio').dirty">*Precio es requerido</span></div>
             <div  class="titulo2">Tiempo</div>
         </div>
         

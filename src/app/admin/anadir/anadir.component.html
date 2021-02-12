@@ -6,7 +6,8 @@
             <div class="titulo2">Imagen 2</div>
         </div>
         <div class="linea">
-            <input  (change)="uploadFile($event)" class="titulo11" type="file" name="" id="">
+            <!-- <div class="rojo" *ngIf="form.get('titulo').hasError('required') && form.get('titulo').dirty">*</div> -->
+            <input   (change)="uploadFile($event)" class="titulo11" type="file" name="" id="">
             <input  (change)="uploadFile2($event)" type="file" name="" id="">
         </div>
 

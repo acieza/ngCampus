@@ -23,6 +23,11 @@
     margin-right: 0.3em;
    
 }
+.rojo{
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+}
 .caja{
     height: 100%;
     width: 100%;

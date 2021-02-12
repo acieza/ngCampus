@@ -38,13 +38,13 @@ export class ServicioService {
     })
   }
 
-  // modificarCurso(putCurso: Carta){
-  //   const token = localStorage.getItem('token') || ''
-  //   return this.http.put<Carta>(`http://localhost:3000/cursos/${this.curso._id}`, putCurso, {
-  //     headers: {
-  //       'mytoken':token
-  //     }});
-  // }
+  modificarCurso(id: string, putCurso: Carta){
+    const token = localStorage.getItem('token') || ''
+    return this.http.put<Carta>(`http://localhost:3000/cursos/${id}`, putCurso, {
+      headers: {
+        'mytoken':token
+      }});
+  }
 
   createCurso(newCurso:Carta){
     const token = localStorage.getItem('token') || ''

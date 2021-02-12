@@ -23,90 +23,130 @@ export class EditarComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: ActivatedRoute,
+    private activateRouter: ActivatedRoute,
     private servicioService: ServicioService,
-    private subirService: SubirService
-    ) {   
-    this.cargaCurso(this.identificaCurso);
+    private subirService: SubirService,
+    private router: Router
+    ) { 
+      this.buildForm();  
+    //this.cargaCurso(this.identificaCurso);
     }
 
 ngOnInit(){
-  this.router.params.subscribe((params: Params)=>{       
+  this.activateRouter.params.subscribe((params: Params)=>{       
     this.identificaCurso=params.id
-   // this.curso= this.servicioService.getCurso(this.identificaCurso)
-   this.cargaCurso(this.identificaCurso); 
+    this.servicioService.getCurso(this.identificaCurso)
+    .subscribe(curso =>{
+      this.form.patchValue(curso);
+    })
+    this.cargaCurso(this.identificaCurso); 
 })
 }
     cargaCurso(id:string){
       this.servicioService.getCurso(id)
       .subscribe(curso =>{
         this.curso = curso;
-        this.buildForm();   
+        
       })    
     }
-Guardar(event: Event){
-
-}
     private buildForm(){
       this.form = this.formBuilder.group({
          imagen: [''],
          imagen2: [''],
-        titulo: [this.curso.titulo, Validators.required],
-        titulo2: [this.curso.titulo2, Validators.required],
-        descripcion: [this.curso.descripcion, Validators.required],
-        descripcionGeneral: [this.curso.descripcionGeneral, Validators.required],
-        precio: [this.curso.precio, Validators.required],
-        tiempo: [this.curso.tiempo, Validators.required],
-        oferta: [this.curso.oferta],
+        titulo: ['', Validators.required],
+        titulo2: ['', Validators.required],
+        descripcion: ['', Validators.required],
+        descripcionGeneral: ['', Validators.required],
+        precio: ['', Validators.required],
+        tiempo: ['', Validators.required],
+        oferta: [''],
         
       })
     }
 
-//     get cambiaFoto(){
-//       return this.form.get('imagen');
+    get cambiaFoto(){
+      return this.form.get('imagen');
       
-//     }
+    }
+    get cambiaFoto2(){
+      return this.form.get('imagen2');
+      
+    }
     
-//    uploadFile(event){
-//      const file = event.target.files[0];
-
-//      const formData = new FormData();
-//      formData.append('imagen',file);
-
-//      this.subirService.subirFoto(formData)
-//      .subscribe((resp:any) =>{
-      
-//       console.log(resp.nombreImg);
-
-//       this.cambiaFoto.setValue( resp.nombreImg);
-//       this.curso.imagen = resp.nombreImg;
-//       this.curso.imagen2 = resp.nombreImg;
-//      },(err) =>{
-//       Swal.fire({
-//         icon:'error',
-//         title:'Oops...',
-//         text: err.error.msg,         
-//       })     
-//      });
-
-//    }
-//    modificarCurso(event: Event){
-//     event.preventDefault();
-//     console.log(this.form.value);
-
-//    this.servicioService.modificarCurso(this.form.value)
-//    .subscribe((resp:any) =>{
-     
-// console.log('*******OK******')
-
-//     },(err) =>{
-//      Swal.fire({
-//        icon:'error',
-//        title:'Oops...',
-//        text: err.error.msg,         
-//      })     
-//     });
-
+    uploadFile(event){
+      const file = event.target.files[0];
   
-  // }
+      const formData = new FormData();
+      formData.append('imagen',file);
+  
+      this.subirService.subirFotoC(formData)
+      .subscribe((resp:any) =>{
+       
+       console.log(resp.nombreImg);
+  
+       this.cambiaFoto.setValue( resp.nombreImg);
+      
+       //this.curso.imagen = resp.nombreImg;
+      // this.curso.imagen2 = resp.nombreImg;
+      },(err) =>{
+       Swal.fire({
+         icon:'error',
+         title:'Oops...',
+         text: err.error.msg,         
+       })     
+      });
+  
+    }
+  
+    uploadFile2(event){
+      const file = event.target.files[0];
+  
+      const formData = new FormData();
+      formData.append('imagen',file);
+  
+      this.subirService.subirFotoC(formData)
+      .subscribe((resp:any) =>{
+       
+       console.log(resp.nombreImg);
+  
+       this.cambiaFoto2.setValue( resp.nombreImg);
+      
+       //this.curso.imagen = resp.nombreImg;
+      // this.curso.imagen2 = resp.nombreImg;
+      },(err) =>{
+       Swal.fire({
+         icon:'error',
+         title:'Oops...',
+         text: err.error.msg,         
+       })     
+      });
+  
+    }
+   modificarCurso(event: Event){
+    event.preventDefault();
+    console.log(this.form.value);
+
+   this.servicioService.modificarCurso(this.identificaCurso, this.form.value)
+   .subscribe((resp:any) =>{
+     
+     console.log('*******Curso Editado con Exito******')
+     Swal.fire({
+       //position: 'top-end',
+       icon: 'success',
+       title: 'Curso Editado con éxito',
+       showConfirmButton: false,
+       timer: 1500
+     });
+     this.router.navigateByUrl(`/admin/Cursos`)
+
+   }, (err) => {
+    Swal.fire({
+      icon:'error',
+      title:'Oops...',
+      text: err.error.msg,         
+    })     
+   });
+
+
+  }
 }
