@@ -14,6 +14,15 @@ export class CartaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get devuelveImagen(){
+    if(this.datoscurso.imagen){
+        return `http://localhost:3000/imgCurso/${this.datoscurso.imagen}`;
+    }else{
+        return `assets/img/user.png`;
+    }
+}
+
+
   
 
 }

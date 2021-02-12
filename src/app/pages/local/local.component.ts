@@ -9,7 +9,7 @@ import { Carta } from './carta/carta';
 })
 export class LocalComponent implements OnInit {
 
-  
+  cartas:Carta[]
 
   constructor(private servicioService: ServicioService) { }
 
@@ -23,10 +23,11 @@ export class LocalComponent implements OnInit {
       this.cartas = cartas;
     })
   }
+  
 
   
 
-  cartas:Carta[]=[
+  
     // {
     //   _id:"string",
     //   imagen: "string",
@@ -55,6 +56,6 @@ export class LocalComponent implements OnInit {
     //   tiempo: 0
 
     // }
-  ]
+  
 
 }

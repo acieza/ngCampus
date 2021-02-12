@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ServicioService } from 'src/app/core/servicios/servicio.service';
@@ -34,6 +34,7 @@ export class CursosComponent  {
       })
     }
 
+    
     
     
     borrarCurso(id:string){

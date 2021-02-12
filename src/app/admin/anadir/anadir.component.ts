@@ -68,6 +68,15 @@ export class AnadirComponent implements OnInit {
     );
   }
 
+  get cambiaFoto(){
+    return this.form.get('imagen');
+    
+  }
+  get cambiaFoto2(){
+    return this.form.get('imagen2');
+    
+  }
+
   uploadFile(event){
     const file = event.target.files[0];
 
@@ -79,9 +88,35 @@ export class AnadirComponent implements OnInit {
      
      console.log(resp.nombreImg);
 
-     //this.cambiaFoto.setValue( resp.nombreImg);
-     this.curso.imagen = resp.nombreImg;
-    //  this.curso.imagen2 = resp.nombreImg;
+     this.cambiaFoto.setValue( resp.nombreImg);
+    
+     //this.curso.imagen = resp.nombreImg;
+    // this.curso.imagen2 = resp.nombreImg;
+    },(err) =>{
+     Swal.fire({
+       icon:'error',
+       title:'Oops...',
+       text: err.error.msg,         
+     })     
+    });
+
+  }
+
+  uploadFile2(event){
+    const file = event.target.files[0];
+
+    const formData = new FormData();
+    formData.append('imagen',file);
+
+    this.subirService.subirFotoC(formData)
+    .subscribe((resp:any) =>{
+     
+     console.log(resp.nombreImg);
+
+     this.cambiaFoto2.setValue( resp.nombreImg);
+    
+     //this.curso.imagen = resp.nombreImg;
+    // this.curso.imagen2 = resp.nombreImg;
     },(err) =>{
      Swal.fire({
        icon:'error',
@@ -94,3 +129,4 @@ export class AnadirComponent implements OnInit {
 
  
 }
+
