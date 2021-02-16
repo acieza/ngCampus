@@ -37,7 +37,7 @@ const routes: Routes = [
         path: 'Anadir', component: AnadirComponent
       },
       {
-        path: 'EditUser', component: EditUserComponent
+        path: 'EditUser/:id', component: EditUserComponent
       }
         
       

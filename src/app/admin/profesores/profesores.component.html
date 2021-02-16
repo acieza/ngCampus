@@ -78,6 +78,9 @@
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <div class="linea">
+                                        <a   class="text-indigo-600 hover:text-indigo-900">
+                                            <p routerLink='../EditUser/{{item._id}}' class="btn" >Edit</p>   
+                                         </a>
                                    
                                     <a   class="text-indigo-600 hover:text-indigo-900">
                                         <p (click)="borrarUser(item._id)" class="btn2">Borrar</p> 
@@ -98,7 +101,7 @@
                                     de
                                     <span class="font-medium">{{pageNumber}}</span>
                                     de
-                                    <span class="font-medium">{{filteredItems.length}}</span>
+                                    <span class="font-medium">{{usuarios.length}}</span>
                                     resultados
                             </p>
                     </div>

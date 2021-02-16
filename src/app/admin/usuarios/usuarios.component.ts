@@ -12,7 +12,9 @@ import Swal from 'sweetalert2';
 })
 export class UsuariosComponent implements OnInit {
 
-  usuarios:Usuario[];
+
+
+  usuarios:Usuario[] = [];
 
   public usuario;
 
