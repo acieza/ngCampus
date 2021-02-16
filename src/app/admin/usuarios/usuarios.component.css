@@ -17,4 +17,16 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.btn{
+    border: 1px solid black;
+    padding: 5px 20px 5px 20px;
+    background-color: #1F2937;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.usu{
+    color: grey;
+    font-size: 20px;
+}
 

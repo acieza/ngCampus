@@ -6,6 +6,7 @@ import { UserModifyComponent } from '../shared/user-modify/user-modify.component
 import { AdminComponent } from './admin.component';
 import { AnadirComponent } from './anadir/anadir.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { EditarComponent } from './editar/editar.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -34,6 +35,9 @@ const routes: Routes = [
       },
       {
         path: 'Anadir', component: AnadirComponent
+      },
+      {
+        path: 'EditUser', component: EditUserComponent
       }
         
       

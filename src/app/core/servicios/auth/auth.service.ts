@@ -63,6 +63,15 @@ export class AuthService {
     });
   }
 
+  getUnUser(id:string){
+    const token = localStorage.getItem('token') || ''
+    return this.http.get<Usuario>(`http://localhost:3000/usuarios/user/${id}`, {
+      headers: {
+        'mytoken':token
+      }
+    });
+  }
+
   getOnlyProfesor(){
     const token = localStorage.getItem('token') || ''
     return this.http.get<Usuario[]>('http://localhost:3000/usuarios/profesor', {
