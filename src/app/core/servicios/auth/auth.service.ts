@@ -89,6 +89,14 @@ export class AuthService {
       }});
   }
 
+  modificarUnUser(id: string, putUser: Usuario){
+    const token = localStorage.getItem('token') || ''
+    return this.http.put<Usuario>(`http://localhost:3000/usuarios/user/${id}`, putUser, {
+      headers: {
+        'mytoken':token
+      }});
+  }
+
   deleteUser(id:string){
     const token = localStorage.getItem('token') || ''
     return this.http.delete<Usuario>(`http://localhost:3000/usuarios/${id}`,{
