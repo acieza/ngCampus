@@ -39,16 +39,16 @@ ngOnInit(){
     .subscribe(curso =>{
       this.form.patchValue(curso);
     })
-    this.cargaCurso(this.identificaCurso); 
+    // this.cargaCurso(this.identificaCurso); 
 })
 }
-    cargaCurso(id:string){
-      this.servicioService.getCurso(id)
-      .subscribe(curso =>{
-        this.curso = curso;
+    // // cargaCurso(id:string){
+    // //   this.servicioService.getCurso(id)
+    // //   .subscribe(curso =>{
+    // //     this.curso = curso;
         
-      })    
-    }
+    // //   })    
+    // }
     private buildForm(){
       this.form = this.formBuilder.group({
          imagen: [''],
