@@ -38,6 +38,7 @@ export class EditUserComponent implements OnInit {
       .subscribe(usuario =>{
         this.form.patchValue(usuario);
         this.usuario = usuario
+        console.log(this.form.value)
       })
      // this.cargaPopulate();
       this.getAllCursos();
@@ -58,7 +59,10 @@ export class EditUserComponent implements OnInit {
       nombre: ['', Validators.required],
       email: ['', Validators.required],
       role: ['', Validators.required],   
-      cursos:  new FormArray([this.muestraCurso()]) 
+      cursos:  new FormArray([this.formBuilder.group({
+        _id:[''],
+        titulo:['']
+      })])
     })
   }
 Objcurso(){
@@ -78,6 +82,7 @@ anadirObCurso(){
 }
 eliminarCurso(id: number){
   this.leerCurso.removeAt(id);
+  console.log(this.form.value)
 }
   verUser(){
     console.log(this.form.value)

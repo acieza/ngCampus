@@ -25,6 +25,7 @@
      <!-- //  <ul> -->
         <!-- <li formControlName="cursos" *ngFor="let itemCur of usuario.cursos">{{itemCur._id}} - {{itemCur.titulo}} <span (click)="borrarCurso(itemCur._id)">X</span></li> -->
          <li  [formGroupName]="i">
+            <input formControlName="_id">
             <input formControlName="titulo"><span (click)="eliminarCurso(i)">X</span>
         </li>
 
