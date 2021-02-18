@@ -5,7 +5,7 @@
         <form [formGroup]="form" (ngSubmit)="modificarUser($event)">
       <div>      
             <!-- <div>Avatar</div> -->
-            <img class="imagen" >
+            <img class="imagen" [src]="devuelveImagen">
             <div class="flex">
             <input disabled  type="file" class="cajas" >
             <select formControlName="role" name="select" id="">
@@ -16,7 +16,19 @@
         </div>
        
     </div>
-    
+   
+    <div class="cursos">Cursos</div>
+    <!-- <select class="sel"  name="select" id="">
+        <option *ngFor="let itemCur of usuario.cursos">{{itemCur.titulo}}</option>
+    </select> -->
+    <ul formArrayName="cursos" *ngFor="let curso of leerCurso.controls; let i = index">
+     <!-- //  <ul> -->
+        <!-- <li formControlName="cursos" *ngFor="let itemCur of usuario.cursos">{{itemCur._id}} - {{itemCur.titulo}} <span (click)="borrarCurso(itemCur._id)">X</span></li> -->
+         <li  [formGroupName]="i">
+            <input formControlName="titulo"><span (click)="eliminarCurso(i)">X</span>
+        </li>
+
+    </ul>
     <div>
         <div class="tama">Nombre</div>
         <input formControlName="nombre" disabled class="in" type="text" name="" id="" class="cajas">

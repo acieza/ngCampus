@@ -75,7 +75,7 @@ export class UserModifyComponent {
     this.authService.modificarUser(this.form.value)
     .subscribe((resp:any) =>{
       
-console.log('*******OK******')
+    console.log('*******OK******')
 
      },(err) =>{
       Swal.fire({

@@ -1,5 +1,5 @@
 export interface Curso {
-    imagen: string;
+  imagen: string;
   imagen2: string;
   titulo: string;
   titulo2: string;

@@ -106,7 +106,9 @@ export class AuthService {
     })
   }
 
-
+  getCursoPopu(id: string){
+    return this.http.get<Usuario>(`http://localhost:3000/usuarios/total/${id}`)
+  }
 
   
 }

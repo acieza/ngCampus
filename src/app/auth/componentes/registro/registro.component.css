@@ -1,5 +1,5 @@
 .bg-grey-lighter{
-    background-color: #dad6d6;
+    background-image: linear-gradient(to right bottom, #d0f9e2, #a1f3f6, #8ee5ff, #bacdff, #f9acf6);
 }
 button:disabled{
     background-color: rgb(182, 181, 181);
