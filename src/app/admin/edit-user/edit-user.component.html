@@ -32,22 +32,19 @@
         <div class="tama">email</div>
         <input formControlName="email" disabled type="email"  class="in"name="" id="" class="cajas">
     </div>
-    <div class="cursos" *ngIf="usuario.curso == null">Cursos</div>
+    <div  class="cursos">Cursos</div>
     <!-- <select class="sel"  name="select" id="">
         <option *ngFor="let itemCur of usuario.cursos">{{itemCur.titulo}}</option>
     </select> -->
-    <div class="cajon" *ngIf="usuario.cursos">
-    
-    <ul  formArrayName="cursos" *ngFor="let curso of leerCurso.controls; let i = index">
-     <!-- //  <ul> -->
-        <!-- <li formControlName="cursos" *ngFor="let itemCur of usuario.cursos">{{itemCur._id}} - {{itemCur.titulo}} <span (click)="borrarCurso(itemCur._id)">X</span></li> -->
-       
-        <li class="fl" [formGroupName]="i">
-            <input class="cajas2" formControlName="titulo"><span class="btn2" (click)="eliminarCurso(i)">Borrar</span>
-        </li>
-    </ul>
-    <div class="cajon" style="display: none;" *ngIf="!usuario.cursos"></div>
+    <div class="cajon">
+        <ul formArrayName="cursos" *ngFor="let curso of leerCurso.controls; let i = index">
+            <li class="fl" [formGroupName]="i">
+                <input class="cajas2" formControlName="titulo"><span class="btn2" (click)="eliminarCurso(i)">Borrar</span>
+            </li>
+        </ul>
 </div> 
+
+
     <div class="botones">
         <button type="submit">Guardar Cambios</button>
     </div>

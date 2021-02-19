@@ -79,7 +79,7 @@ export class CursosComponent  {
 
   filteredItems: Carta[];
   pages: number = 4;
-  pageSize: number = 5;
+  pageSize: number = 6;
   pageNumber: number = 0;
   currentIndex: number = 1;
   items: Carta[];

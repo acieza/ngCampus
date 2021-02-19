@@ -16,7 +16,7 @@ import Swal from 'sweetalert2';
 export class EditUserComponent implements OnInit {
   usuario: Usuario;
   form: FormGroup;
-  
+  form2: FormGroup;
   cursos: Carta[];
 
   identificaUser="";
@@ -110,8 +110,19 @@ get devuelveImagen(){
   modificarUser(event: Event){
     event.preventDefault();
     console.log(this.form.value);
+    
+    this.form2=this.form;
+    this.form2.setValue(this.form.value);
+    
+    console.log('*******Form2******')
+    //this.form2.value.cursos.length
+    
+    for(let x=0; x<this.form2.value.cursos.length;x++){
+      this.form2.value.cursos[x]=this.form.value.cursos[x]._id;
+    }
+    console.log(this.form2.value)
 
-   this.authService.modificarUnUser(this.identificaUser, this.form.value)
+   this.authService.modificarUnUser(this.identificaUser, this.form2.value)
    .subscribe((resp:any) =>{
      
      console.log('*******Usuario Editado con Exito******')

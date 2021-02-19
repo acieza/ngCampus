@@ -29,7 +29,7 @@ export class LoginComponent {
     this.authService.login(this.loginForm.value)
     .subscribe(resp =>{
         console.log('******* TODO BIEN ******');
-        this.router.navigateByUrl('admin')
+        this.router.navigateByUrl('admin/Cursos')
      }, (err) => {
         console.log(err.error.msg)
 

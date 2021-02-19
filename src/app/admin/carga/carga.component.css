@@ -1,0 +1,38 @@
+.todo{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cajaFoto{
+    height: 350px;
+    width: 850px;
+    background-color: black;
+    position: relative;
+}
+.caja{
+    background-color: white;
+    height: 250px;
+    width: 550px;
+    position: absolute;
+    bottom: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+    width: 275px;
+    
+}
+button{ 
+    background-color: #3182CE;;
+    border-radius: 5px;
+    padding: 8px 15px 5px 15px;
+    color: white;
+}

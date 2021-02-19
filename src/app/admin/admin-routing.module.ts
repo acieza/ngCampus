@@ -5,6 +5,7 @@ import { UserModifyComponent } from '../shared/user-modify/user-modify.component
 
 import { AdminComponent } from './admin.component';
 import { AnadirComponent } from './anadir/anadir.component';
+import { CargaComponent } from './carga/carga.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { EditarComponent } from './editar/editar.component';
@@ -38,6 +39,9 @@ const routes: Routes = [
       },
       {
         path: 'EditUser/:id', component: EditUserComponent
+      },
+      {
+        path: 'Carga', component: CargaComponent
       }
         
       

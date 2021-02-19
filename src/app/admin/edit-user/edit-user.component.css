@@ -132,9 +132,14 @@ h2{
     justify-content: space-between;
   
 }
+.cursos{
+    font-size: 14px;
+    margin-left: 0.5em;
+    margin-top: 1em;
+}
 .cajon{
     overflow-y: scroll;
-    height: 120px;
+    height: 90px;
     margin-top: 0.5em;
 }
 .cajon::-webkit-scrollbar-track

@@ -90,8 +90,8 @@ export class UsuariosComponent implements OnInit {
       /****************************************/
 
   filteredItems: Usuario[];
-  pages: number = 3;
-  pageSize: number = 4;
+  pages: number = 4;
+  pageSize: number = 6;
   pageNumber: number = 0;
   currentIndex: number = 1;
   items: Usuario[];
@@ -103,7 +103,7 @@ export class UsuariosComponent implements OnInit {
   init() {
     this.currentIndex = 1;
     this.pageStart = 1;
-    this.pages = 3;
+    this.pages = 4;
 
     this.pageNumber = parseInt("" + (this.filteredItems.length / this.pageSize));
     if (this.filteredItems.length % this.pageSize != 0) {

@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { AnadirComponent } from './anadir/anadir.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { CargaComponent } from './carga/carga.component';
 
 
 
@@ -22,7 +23,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     EditarComponent, 
     UsuariosComponent, 
     ProfesoresComponent, 
-    AnadirComponent, EditUserComponent],
+    AnadirComponent, EditUserComponent, CargaComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
