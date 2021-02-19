@@ -1,11 +1,17 @@
 <section>
     <div class="centro">
-        <h2>Datos de Usuario</h2>
-
+        <div class="centrar">
+            <div class="izq">
+                <h2>Datos de Usuario</h2>
+            </div>
+            <div class="der">
+                <img class="imagen" [src]="devuelveImagen">
+            </div>       
+        </div>
         <form [formGroup]="form" (ngSubmit)="modificarUser($event)">
       <div>      
             <!-- <div>Avatar</div> -->
-            <img class="imagen" [src]="devuelveImagen">
+            
             <div class="flex">
             <input disabled  type="file" class="cajas" >
             <select formControlName="role" name="select" id="">
@@ -17,19 +23,7 @@
        
     </div>
    
-    <div class="cursos">Cursos</div>
-    <!-- <select class="sel"  name="select" id="">
-        <option *ngFor="let itemCur of usuario.cursos">{{itemCur.titulo}}</option>
-    </select> -->
-    <ul formArrayName="cursos" *ngFor="let curso of leerCurso.controls; let i = index">
-     <!-- //  <ul> -->
-        <!-- <li formControlName="cursos" *ngFor="let itemCur of usuario.cursos">{{itemCur._id}} - {{itemCur.titulo}} <span (click)="borrarCurso(itemCur._id)">X</span></li> -->
-         <li  [formGroupName]="i">
-            <input formControlName="_id">
-            <input formControlName="titulo"><span (click)="eliminarCurso(i)">X</span>
-        </li>
-
-    </ul>
+    
     <div>
         <div class="tama">Nombre</div>
         <input formControlName="nombre" disabled class="in" type="text" name="" id="" class="cajas">
@@ -38,7 +32,22 @@
         <div class="tama">email</div>
         <input formControlName="email" disabled type="email"  class="in"name="" id="" class="cajas">
     </div>
-   
+    <div class="cursos" *ngIf="usuario.curso == null">Cursos</div>
+    <!-- <select class="sel"  name="select" id="">
+        <option *ngFor="let itemCur of usuario.cursos">{{itemCur.titulo}}</option>
+    </select> -->
+    <div class="cajon" *ngIf="usuario.cursos">
+    
+    <ul  formArrayName="cursos" *ngFor="let curso of leerCurso.controls; let i = index">
+     <!-- //  <ul> -->
+        <!-- <li formControlName="cursos" *ngFor="let itemCur of usuario.cursos">{{itemCur._id}} - {{itemCur.titulo}} <span (click)="borrarCurso(itemCur._id)">X</span></li> -->
+       
+        <li class="fl" [formGroupName]="i">
+            <input class="cajas2" formControlName="titulo"><span class="btn2" (click)="eliminarCurso(i)">Borrar</span>
+        </li>
+    </ul>
+    <div class="cajon" style="display: none;" *ngIf="!usuario.cursos"></div>
+</div> 
     <div class="botones">
         <button type="submit">Guardar Cambios</button>
     </div>

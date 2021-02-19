@@ -14,9 +14,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./edit-user.component.css']
 })
 export class EditUserComponent implements OnInit {
-
-  form: FormGroup;
   usuario: Usuario;
+  form: FormGroup;
+  
   cursos: Carta[];
 
   identificaUser="";
@@ -36,6 +36,9 @@ export class EditUserComponent implements OnInit {
       this.identificaUser=params.id
       this.authService.getCursoPopu(this.identificaUser)
       .subscribe(usuario =>{
+        for(let i = 0;i < usuario.cursos.length; i++ ){
+          this.anadirObCurso();
+        }
         this.form.patchValue(usuario);
         this.usuario = usuario
         console.log(this.form.value)
@@ -57,12 +60,9 @@ export class EditUserComponent implements OnInit {
     this.form = this.formBuilder.group({
        img: [''],
       nombre: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', Validators.required],   
       role: ['', Validators.required],   
-      cursos:  new FormArray([this.formBuilder.group({
-        _id:[''],
-        titulo:['']
-      })])
+      cursos:  new FormArray([])
     })
   }
 Objcurso(){
@@ -74,9 +74,9 @@ Objcurso(){
 get leerCurso(){
     return this.form.get('cursos')as FormArray;
   }
-  muestraCurso(){
-    return this.form.get('cursos')as FormArray;
-  }
+  // muestraCurso(){
+  //   return this.form.get('cursos')as FormArray;
+  // }
 anadirObCurso(){
   this.leerCurso.push(this.Objcurso())
 }
@@ -88,12 +88,23 @@ eliminarCurso(id: number){
     console.log(this.form.value)
   }
 
-  get devuelveImagen(){
-    if(this.usuario.img){
-        return `http://localhost:3000/img/${this.usuario.img}`;
-    }else{
-        return `assets/img/user.png`;
-    }
+//   get devuelveImagen(){
+//     if(this.usuario.img){
+//         return `http://localhost:3000/img/${this.usuario.img}`;
+//     }else{
+//         return `assets/img/user.png`;
+//     }
+// }
+
+get devuelveImagen(){
+  if(this.usuario){
+
+  if(this.usuario.img == null || this.usuario.img == ""){
+    return `assets/img/user.png`;
+  }else{
+    return `http://localhost:3000/img/${this.usuario.img}`;
+  }
+}
 }
 
   modificarUser(event: Event){
