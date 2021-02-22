@@ -24,7 +24,10 @@ export class AuthService {
     return this.http.post<any>(`http://localhost:3000/login`,elUser)
     .pipe(                                      // Guardar el token en localStorage //
       tap(resp =>{
-        localStorage.setItem('token', resp.token)
+        const{nombre, email, img, _id, role}=resp.usuarioLogin
+        this.usuario=new Usuario(nombre,email,'',img,role,_id);
+        this.usuario.imprimirUsuario();
+        localStorage.setItem('token', resp.token);
       })
       );
   }
@@ -110,5 +113,8 @@ export class AuthService {
     return this.http.get<Usuario>(`http://localhost:3000/usuarios/total/${id}`)
   }
 
+  get role(): 'admin' | 'user' | 'profesor' {
+    return this.usuario.role;
+  }
   
 }

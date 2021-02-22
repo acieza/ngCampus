@@ -1,11 +1,12 @@
 <div class="todo">
     <div class="cajaFoto">
         
-    </div>
+    
     <div class="caja">
-        <form [formGroup]="form" class="caja" (ngSubmit)="uploadFile()">
+        <form [formGroup]="form"  (ngSubmit)="uploadFile()">
         <input type="file" (change)="cargaArchivo($event)">
         <button type="submit">Cargar CSV</button>
     </form>
     </div>
+</div>
 </div>

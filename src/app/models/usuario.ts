@@ -4,7 +4,7 @@ export class Usuario {
         public email: string,
         public password: string,
         public img?:string,
-        public role?: string,
+        public role?: 'admin' | 'user' | 'profesor',
         public _id?: string,
         public cursos?: [any]
     ){}
