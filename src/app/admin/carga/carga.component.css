@@ -13,6 +13,12 @@
     background-color: black;
     position: relative;
     margin-top: 4em;
+    background-size: cover;
+    border-radius: 10px;
+}
+.img{
+    height: 100%;
+    width: 100%;
 }
 .caja{
     background-color: white;
