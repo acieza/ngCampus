@@ -3,9 +3,9 @@
         
     </div>
     <div class="caja">
-        <!-- <form class="caja" action=""> -->
-        <input type="file" name="" id="">
+        <form [formGroup]="form" class="caja" (ngSubmit)="uploadFile()">
+        <input type="file" (change)="cargaArchivo($event)">
         <button type="submit">Cargar CSV</button>
-    <!-- </form> -->
+    </form>
     </div>
 </div>
