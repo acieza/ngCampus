@@ -31,6 +31,7 @@ export class CargaComponent implements OnInit {
   cargaArchivo(event){
     const file = event.target.files[0];
     this.form.get('archivo').setValue(file);
+    console.log(file)
   }
 
   uploadFile(){
