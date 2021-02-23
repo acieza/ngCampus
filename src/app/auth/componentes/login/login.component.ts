@@ -22,7 +22,7 @@ export class LoginComponent {
     private authService: AuthService,
     private formBuild: FormBuilder,
     private router: Router
-    ) { }
+    ) {this.usuarioconToken() }
                        // Comprobar si existe el usuario para entrar en la aplicación  //
     logearUsuario(event: Event){
       event.preventDefault();
@@ -43,6 +43,20 @@ export class LoginComponent {
     });
     }
 
-  
+  usuarioconToken(){
+    console.log('Inicio con Token');
+    if(localStorage.getItem('token')){
+      console.log(this.authService.tokenRol)
+      var tokenRol = this.authService.tokenRol.role;
+      console.log('**Paso**');
+      if(tokenRol != "user"){
+        console.log("1")
+        this.router.navigateByUrl('/admin');
+      }else{
+        console.log("2");
+        this.router.navigateByUrl('/lms');
+      }
+    }
+  }
 
 }
