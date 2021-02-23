@@ -70,4 +70,15 @@ nav{
     margin-top: 3em;
     display: grid;
     padding: 2em;
+  
+}
+.centrar2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+    font-size: 32px;
+    width: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+
 }
