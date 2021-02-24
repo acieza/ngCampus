@@ -3,7 +3,15 @@
         <div class="logo"><img src="assets/img/logo.png" alt=""> </div>
         <p class="tit">BETA ACADEMY</p>
     </div>
-    <div class="der">
+    <div class="der" *ngIf='token == true'>
+        <div class="fle">
+            <img [src]="img" alt="">
+            <p class="no">{{nombre}}</p>
+        </div>
+        <div class="abs"></div>
+        <button class="close" (click)="cerrarSesion()">Logout</button>
+    </div>
+    <div class="der" *ngIf="token == false">
         <div class="btn1" routerLink='/auth'>Iniciar Sesión</div>
         <div class="btn2" routerLink='/auth/registro'>Registrarse</div>
     </div>
@@ -13,8 +21,8 @@
 <div class="centrar2">
     <p>Apúntate a Nuestros Cursos!</p>
 </div>
-<div class="centro" >
-    
+<div class="centro">
+
     <div class="centrar">
         <app-carta *ngFor="let item of cartas" [datoscurso]="item"></app-carta>
     </div>

@@ -18,8 +18,9 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot) {
 
       console.log('***** Paso por aqui *******')
-
+if(localStorage.getItem('token')){
      return this.authService.renovarToken()
+     
         .pipe(
           tap(estalogeado =>{
             if(!estalogeado){
@@ -27,6 +28,8 @@ export class AuthGuard implements CanActivate {
             }
           })
         )
-      
+        }else{
+          this.router.navigateByUrl('/auth')
+        }
     }
 }

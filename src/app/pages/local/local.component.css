@@ -1,6 +1,9 @@
 nav{
+    height: 80px;
     display: flex;
     background-color: cornflowerblue;
+    justify-content: center;
+    align-items: center;
 }
 .der, .izq{
     width: 50%;
@@ -11,6 +14,11 @@ nav{
     justify-content: flex-end;
     align-items: center;
     padding-right: 2em;
+
+}
+.no{
+    color: white;
+    margin-right: 0.5em;
 }
 .izq{
     display: flex;
@@ -22,6 +30,11 @@ nav{
 .logo img{
     height: 50px;
     margin-left: 0.8em;
+}
+.der img{
+    height: 50px;
+    width: 50px;
+    border-radius: 2em;
 }
 .btn1{
     border: 1px solid grey;
@@ -45,6 +58,27 @@ nav{
     cursor: pointer;
     margin-right: 0.8em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fle{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3em;
+}
+.abs{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 2em;
+    right: 110px;
+    top: 35px;
+
+}
+.close{
+     background: -webkit-linear-gradient(0deg, #1A202C 0%, #CD3F8B 100%);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
 }
 .tit{
     margin-left: 1em;
