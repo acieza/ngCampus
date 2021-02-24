@@ -62,7 +62,7 @@ export class AuthService {
     const token = localStorage.getItem('token') || ''
     return this.http.get<Usuario[]>('http://localhost:3000/usuarios/user', {
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }
     });
   }
@@ -71,7 +71,7 @@ export class AuthService {
     const token = localStorage.getItem('token') || ''
     return this.http.get<Usuario>(`http://localhost:3000/usuarios/user/${id}`, {
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }
     });
   }
@@ -80,7 +80,7 @@ export class AuthService {
     const token = localStorage.getItem('token') || ''
     return this.http.get<Usuario[]>('http://localhost:3000/usuarios/profesor', {
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }
     });
   }
@@ -89,7 +89,7 @@ export class AuthService {
     const token = localStorage.getItem('token') || ''
     return this.http.put<Usuario>(`http://localhost:3000/usuarios/${this.usuario._id}`, putUser, {
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }});
   }
 
@@ -97,7 +97,7 @@ export class AuthService {
     const token = localStorage.getItem('token') || ''
     return this.http.put<Usuario>(`http://localhost:3000/usuarios/user/${id}`, putUser, {
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }});
   }
 
@@ -105,7 +105,7 @@ export class AuthService {
     const token = localStorage.getItem('token') || ''
     return this.http.delete<Usuario>(`http://localhost:3000/usuarios/${id}`,{
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }
     })
   }

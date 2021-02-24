@@ -49,9 +49,10 @@ export class LoginComponent {
       console.log(this.authService.tokenRol)
       var tokenRol = this.authService.tokenRol.role;
       console.log('**Paso**');
+      this.authService.renovarToken();
       if(tokenRol != "user"){
         console.log("1")
-        this.router.navigateByUrl('/admin');
+        this.router.navigateByUrl('/admin/Cursos');
       }else{
         console.log("2");
         this.router.navigateByUrl('/lms');
