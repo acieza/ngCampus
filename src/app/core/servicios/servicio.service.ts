@@ -25,7 +25,7 @@ export class ServicioService {
     const token = localStorage.getItem('token') || ''
     return this.http.get<Curso>(`http://localhost:3000/cursos/${id}`,{
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }});
   }
 
@@ -33,7 +33,7 @@ export class ServicioService {
     const token = localStorage.getItem('token') || ''
     return this.http.delete<Carta>(`http://localhost:3000/cursos/${id}`,{
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }
     })
   }
@@ -42,7 +42,7 @@ export class ServicioService {
     const token = localStorage.getItem('token') || ''
     return this.http.put<Carta>(`http://localhost:3000/cursos/${id}`, putCurso, {
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }});
   }
 
@@ -50,7 +50,7 @@ export class ServicioService {
     const token = localStorage.getItem('token') || ''
     return this.http.post<Carta>('http://localhost:3000/cursos', newCurso,{
       headers: {
-        'mytoken':token
+        'mytoken':JSON.parse(token)
       }
     })
   }

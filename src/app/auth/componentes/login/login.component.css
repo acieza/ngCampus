@@ -5,4 +5,14 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to right bottom, #d0f9e2, #a1f3f6, #8ee5ff, #bacdff, #f9acf6);
+    position: relative;
+}
+
+.flecha{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 }

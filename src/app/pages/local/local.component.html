@@ -8,8 +8,10 @@
             <img [src]="img" alt="">
             <p class="no">{{nombre}}</p>
         </div>
-        <div class="abs"></div>
-        <button class="close" (click)="cerrarSesion()">Logout</button>
+       
+        <button class="btn2" routerLink="/admin/Cursos">menú</button>
+        <button class="btn1" (click)="cerrarSesion()">Logout</button>
+        
     </div>
     <div class="der" *ngIf="token == false">
         <div class="btn1" routerLink='/auth'>Iniciar Sesión</div>
