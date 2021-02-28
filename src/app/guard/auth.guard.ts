@@ -21,13 +21,13 @@ export class AuthGuard implements CanActivate {
 if(localStorage.getItem('token')){
      return this.authService.renovarToken()
      
-        .pipe(
-          tap(estalogeado =>{
-            if(!estalogeado){
-              this.router.navigateByUrl('/auth');
-            }
-          })
-        )
+     .pipe(
+      tap(estalogeado =>{
+        if(!estalogeado){
+          this.router.navigateByUrl('/auth');
+        }
+      })
+    )
         }else{
           this.router.navigateByUrl('/auth')
         }

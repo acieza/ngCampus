@@ -25,8 +25,8 @@ export class AuthService {
     return this.http.post<any>(`http://localhost:3000/login`,elUser)
     .pipe(                                      // Guardar el token en localStorage //
       tap((resp: any) =>{
-        const{nombre, email, img, _id, role}=resp.usuarioLogin
-        this.usuario=new Usuario(nombre,email,'',img,role,_id);
+        const{nombre, email, img, _id, role, cursos}=resp.usuarioLogin
+        this.usuario=new Usuario(nombre,email,'',img,role,_id,cursos);
         this.usuario.imprimirUsuario();
         localStorage.setItem('token', JSON.stringify(resp.token));
       })
@@ -47,8 +47,8 @@ export class AuthService {
     })
     .pipe(
       tap((resp: any)=>{
-        const{nombre, email, img, _id, role}=resp.usuario
-        this.usuario=new Usuario(nombre,email,'',img,role,_id);
+        const{nombre, email, img, _id, role, cursos}=resp.usuario
+        this.usuario=new Usuario(nombre,email,'',img,role,_id, cursos);
         this.usuario.imprimirUsuario();
         localStorage.setItem('token',JSON.stringify(resp.token));
       }),

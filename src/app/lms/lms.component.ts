@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../core/servicios/auth/auth.service';
 
 @Component({
   selector: 'app-lms',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LmsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService : AuthService) { }
 
   ngOnInit(): void {
+  }
+  cerrarSesion(){
+    this.authService.logout()
   }
 
 }
