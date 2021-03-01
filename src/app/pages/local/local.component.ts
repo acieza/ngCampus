@@ -15,10 +15,17 @@ export class LocalComponent implements OnInit {
   img="";
   token = false;
   role = "";
+  cursos=[];
   constructor(
     private servicioService: ServicioService,
     private authService: AuthService
-  ) { this.cargaTR()}
+  ) { 
+    this.cargaTR()
+    console.log(this.nombre)
+    console.log(this.role)
+    console.log(this.img)
+    console.log(this.cursos)
+  }
 
   ngOnInit(): void {
     this.cargaCurso();
@@ -38,6 +45,7 @@ export class LocalComponent implements OnInit {
       this.role = this.authService.tokenRol.role;
       this.token = true;
       this.nombre = this.authService.tokenRol.nombre
+      this.cursos = this.authService.tokenRol.cursos
       if(this.authService.tokenRol.img){
         this.img = `http://localhost:3000/img/${this.authService.tokenRol.img}`
       }else{

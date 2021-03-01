@@ -42,6 +42,7 @@ export class EditUserComponent implements OnInit {
         this.form.patchValue(usuario);
         this.usuario = usuario
         console.log(this.form.value)
+        console.log(this.usuario)
       })
      // this.cargaPopulate();
       this.getAllCursos();
@@ -68,7 +69,8 @@ export class EditUserComponent implements OnInit {
 Objcurso(){
    return this.formBuilder.group({
      _id:[''],
-     titulo:['']
+     titulo:[''],
+   
    })
 }
 get leerCurso(){
