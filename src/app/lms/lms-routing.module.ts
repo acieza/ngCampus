@@ -5,6 +5,7 @@ import { UserModifyComponent } from '../shared/user-modify/user-modify.component
 
 import { LmsComponent } from './lms.component';
 import { MisCursosComponent } from './mis-cursos/mis-cursos.component';
+import { VideosComponent } from './videos/videos.component';
 
 const routes: Routes = [
   { path: '',
@@ -15,6 +16,9 @@ const routes: Routes = [
     },
     {
       path: 'misCursos', component: MisCursosComponent
+    },
+    {
+      path: 'videos/:id', component: VideosComponent
     },
    ]
   },

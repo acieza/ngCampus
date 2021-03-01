@@ -6,10 +6,11 @@ import { LmsComponent } from './lms.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MisCursosComponent } from './mis-cursos/mis-cursos.component';
+import { VideosComponent } from './videos/videos.component';
 
 
 @NgModule({
-  declarations: [LmsComponent, MisCursosComponent],
+  declarations: [LmsComponent, MisCursosComponent, VideosComponent],
   imports: [
     CommonModule,
     LmsRoutingModule,
