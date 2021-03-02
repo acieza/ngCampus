@@ -1,3 +1,5 @@
+import { Clase } from "./clase";
+
 export interface Curso {
   imagen: string;
   imagen2: string;
@@ -9,6 +11,6 @@ export interface Curso {
   precio: number;
   tiempo: number;
   oferta: boolean;
-  clases: [any]
+  clases: Clase[];
   
 }

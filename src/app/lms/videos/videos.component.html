@@ -1,26 +1,27 @@
+<div class="todo">
+<section class="fle">
 
-    <form class="todo" [formGroup]="form">
-    <section class="fle">
-        
-        <div class="video"><iframe src="https://www.youtube.com/embed/Y6xAQVXkhLA" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <div class="video"><iframe [src]="video()" width="100%" height="100%"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="desc">
+        <div>
+            <p>{{detalle}}</p>
         </div>
-        <div class="desc">
-            <div><p>Descripcion del tema</p></div>
-        </div>
-    </section>
-    <section class="cla">
-        <div class="clase">
+    </div>
+</section>
+<section class="cla" ><!---->
+    <div class="clase" ><!---->
+        <ul  ><!-- -->
             
-            <ul class="nombreClase" formArrayName="clases" *ngFor="let clase of leerClase.controls; let i = index">
-                <li [formGroupName]="i">
-                    <input type="text" formControlName="nombre">
-                    
-                </li>
-            </ul>
-           
-        
-        </div>
-    
-    </section>
-</form>
+            <li class="nombreClase" *ngFor="let clase of clases" background-color="color:grey" style="color:red; margin-bottom: 3em;"> 
+                {{clase.nombre}}
+                <div  *ngFor="let tema of clase.temas" style="color:white; margin-top: 0.3em; margin-bottom:0.2em;cursor:pointer" (click)="pasaValor(tema.link, tema.detalle)">
+                 -- {{tema.nombreTema}}
+                </div>
+            </li>
+        </ul>
+    </div>
 
+</section>
+</div>
