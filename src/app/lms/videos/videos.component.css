@@ -1,9 +1,10 @@
 .todo{
     height: 100%;
     width: 100%;
-    background-color: pink;
+    background-color: white;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
 .fle{
     display: flex;
@@ -12,19 +13,19 @@
 .video{
     margin: 1em;
     border: 1px solid black;
-    height: 400px;
-    width: 600px;
+    height: 600px;
+    width: 800px;
 }
 .cla{
     border: 1px solid black;
-    height: 650px;
+    height: 832px;
     width: 250px;
     margin: 1em;
 }
 .desc{
     margin: 1em;
     height: 200px;
-    width: 600px;
+    width: 800px;
     border: 1px solid black;
 }
 .clase{
@@ -42,4 +43,7 @@
     width: 74%;
     background-color: coral;
     margin-left: 4em;
+}
+input{
+    width: 100%;
 }

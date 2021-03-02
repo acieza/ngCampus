@@ -54,6 +54,10 @@ export class ServicioService {
       }
     })
   }
+  getClasePopu(id: string){
+    return this.http.get<Curso>(`http://localhost:3000/cursos/total/${id}`)
+  }
+
   
  
   

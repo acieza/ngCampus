@@ -9,6 +9,6 @@ export interface Curso {
   precio: number;
   tiempo: number;
   oferta: boolean;
-
+  clases: [any]
   
 }

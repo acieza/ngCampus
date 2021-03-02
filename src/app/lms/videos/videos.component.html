@@ -1,20 +1,26 @@
-<div class="todo">
+
+    <form class="todo" [formGroup]="form">
     <section class="fle">
-        <div class="video"><p>video</p></div>
+        
+        <div class="video"><iframe src="https://www.youtube.com/embed/Y6xAQVXkhLA" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="desc">
             <div><p>Descripcion del tema</p></div>
         </div>
     </section>
     <section class="cla">
         <div class="clase">
-            <div class="nombreClase">
-                <p>Nombre de la Clase</p>
-            </div>
-            <div class="te">
-                <div>Tema1</div>
-                <div>Tema2</div>
-                <div>Tema3</div>
-            </div>
+            
+            <ul class="nombreClase" formArrayName="clases" *ngFor="let clase of leerClase.controls; let i = index">
+                <li [formGroupName]="i">
+                    <input type="text" formControlName="nombre">
+                    
+                </li>
+            </ul>
+           
+        
         </div>
+    
     </section>
-</div>
+</form>
+
