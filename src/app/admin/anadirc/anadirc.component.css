@@ -1,0 +1,64 @@
+.total{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contenedor{
+    height: 70%;
+    width: 70%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: white;
+}
+.nombre{
+    width: 90%;
+    height: 90%;
+    font-size: 22px;
+}
+input, textarea{
+    width: 65%;
+    border: 1px solid #1F2937;
+    border-radius: 5px;
+}
+.fle{
+    display: flex;
+   
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    margin-left: 1em;
+    padding-bottom: 0.2em;
+    background-color: #3182CE;
+    /* padding: 0.5em 0.25em; */
+    border-radius: 2em;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.grupo{
+   margin-left: 7em;
+}
+button{
+    background-color: #3182CE;
+    margin-top: 1.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    padding-bottom: 5px;
+    border-radius: 0.5em;
+    width: 70%;
+}
+button:hover{
+    background-color: #2B6CB0;
+    transition: 1s;
+}

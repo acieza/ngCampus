@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="crearClase($event)" class="total">
+    <!-- <div class="contenedor"> -->
+        <div  class="contenedor">
+        <div class="nombre">
+            <p>Nombre de la clase</p>
+            <div class="fle">
+                <input type="text" formControlName="nombre">
+                <div class="button" (click)="anadirNuevoTema()">+</div>
+            </div>
+            <div formArrayName="temas" *ngFor="let tema of temasArchivos.controls; let i = index">
+                <div [formGroupName]="i" class="grupo">
+                  <div>
+                    <p>Introduce nombre del tema</p>
+                    <input type="text" formControlName="nombreTema">
+                  </div>
+                  <div>
+                    <p>Introduce link</p>
+                    <input type="text" formControlName="link">
+                  </div>
+                  <div>
+                    <p>Introduce detalle</p>
+                    <textarea formControlName="detalle"></textarea>
+                  </div>
+                </div>
+              </div>  
+              <!-- <button type="submit">guardar</button>           -->
+        </div>
+        
+    </div>
+    <button type="submit">guardar</button> 
+</form>

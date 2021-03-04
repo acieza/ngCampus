@@ -18,4 +18,10 @@ export class SclasesService {
     return this.http.get<Clase[]>('http://localhost:3000/clases')
    
   }
+  createClase(newClase:Clase, id:string){
+    
+    return this.http.post<Clase>(`http://localhost:3000/clases/${id}`, newClase,{
+     
+    })
+  }
 }

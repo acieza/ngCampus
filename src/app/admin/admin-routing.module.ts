@@ -5,6 +5,7 @@ import { UserModifyComponent } from '../shared/user-modify/user-modify.component
 
 import { AdminComponent } from './admin.component';
 import { AnadirComponent } from './anadir/anadir.component';
+import { AnadircComponent } from './anadirc/anadirc.component';
 import { CargaComponent } from './carga/carga.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
@@ -42,6 +43,9 @@ const routes: Routes = [
       },
       {
         path: 'Carga', component: CargaComponent
+      },
+      {
+        path: 'anadirc/:id', component: AnadircComponent
       }
         
       

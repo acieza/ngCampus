@@ -13,6 +13,8 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { AnadirComponent } from './anadir/anadir.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { CargaComponent } from './carga/carga.component';
+import { AnadircComponent } from './anadirc/anadirc.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -23,13 +25,16 @@ import { CargaComponent } from './carga/carga.component';
     EditarComponent, 
     UsuariosComponent, 
     ProfesoresComponent, 
-    AnadirComponent, EditUserComponent, CargaComponent],
+    AnadirComponent, EditUserComponent, CargaComponent, AnadircComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ]
+ 
 })
+
 export class AdminModule { }
