@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "601c3e979cc26137706fdf4e"
+  },
+  "oferta": true,
+  "clases": [
+    {
+      "$oid": "6043551b72eb0a380ce25917"
+    },
+    {
+      "$oid": "6043556072eb0a380ce25919"
+    },
+    {
+      "$oid": "6043565272eb0a380ce2591b"
+    }
+  ],
+  "titulo": "Curso de Java",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "e77313d090ff9ed7afd50617ee897031.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "601c3e9e9cc26137706fdf4f"
+  },
+  "oferta": false,
+  "clases": [
+    {
+      "$oid": "6043582c72eb0a380ce2591f"
+    },
+    {
+      "$oid": "604358c272eb0a380ce25922"
+    },
+    {
+      "$oid": "6043597772eb0a380ce25925"
+    }
+  ],
+  "titulo": "Curso de Node",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "8c5c7596544828917e43f0fb6c929d84.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "601e597be2257319908dd433"
+  },
+  "oferta": true,
+  "clases": [],
+  "titulo": "Curso de Trello",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "21e8ec9febdaa86a81dc3973a593530a.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e598de2257319908dd434"
+  },
+  "oferta": true,
+  "clases": [],
+  "titulo": "Curso de JavaScript",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "a6eb15f7422e42a31133a98dc9ef77cd.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d6d03a48151474b3f320"
+  },
+  "oferta": false,
+  "clases": [],
+  "titulo": "Curso de Flutter",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "45bf0afec86d3a26707399246925a09a.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d6d53a48151474b3f321"
+  },
+  "oferta": false,
+  "clases": [],
+  "titulo": "Curso de Dart",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "1758d7898bafde1e1d41d23914bd5ac3.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d6e43a48151474b3f322"
+  },
+  "oferta": true,
+  "clases": [],
+  "titulo": "Curso de Phyton",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "f42976b9bf2cc650aec9f2dbd5f96f4b.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d6ea3a48151474b3f323"
+  },
+  "oferta": true,
+  "clases": [],
+  "titulo": "Curso de Scala",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "4c35e2c92e2ed267c4232f54fb8a6fa4.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d6ee3a48151474b3f324"
+  },
+  "oferta": true,
+  "clases": [],
+  "titulo": "Curso de Git",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "d2947dc5a08006f711474e079c9aaab0.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d6f83a48151474b3f325"
+  },
+  "oferta": false,
+  "clases": [],
+  "titulo": "Curso de GitHub",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "660f072fd88f0c99d3572c830ea2b619.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6022d73d3a48151474b3f326"
+  },
+  "oferta": true,
+  "clases": [],
+  "titulo": "Curso de HTML",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "b3f2afa5631b48245ddae7232563277d.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "603d3a2f86bee62cb80882a5"
+  },
+  "oferta": true,
+  "clases": [
+    {
+      "$oid": "603dfd90b38bbd39bcbe41bc"
+    }
+  ],
+  "titulo": "Curso de VPN",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "e77313d090ff9ed7afd50617ee897031.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "603e1b3fb38bbd39bcbe41c2"
+  },
+  "oferta": true,
+  "clases": [
+    {
+      "$oid": "603dfd90b38bbd39bcbe41bc"
+    },
+    {
+      "$oid": "603e1ad5b38bbd39bcbe41c0"
+    }
+  ],
+  "titulo": "Curso de Ejemplo",
+  "titulo2": "Desarrollo de Aplicaciones Multiplataforma.",
+  "descripcion": "Curso FP de Grado Superior",
+  "descripcionGeneral": "El Ciclo Formativo de Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma), te permitirá trabajar desarrollando, implantando, documentando y manteneniendo aplicaciones informáticas multiplataforma en todas las empresas del sector.",
+  "link": "https://www.campusomega.es/",
+  "precio": 2000,
+  "tiempo": 1200,
+  "imagen": "e77313d090ff9ed7afd50617ee897031.jpeg",
+  "imagen2": "adgfasdfasfa",
+  "__v": 0
+}]
